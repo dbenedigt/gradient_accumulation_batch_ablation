@@ -1,4 +1,4 @@
-# routing_ablation_matrix_16b9bd83
+# gradient_accumulation_batch_ablation
 
 （多模态场景）如何让梯度累积与有效批量的度量结果能被第三方复核？用路由与负载分布输出每个分量的贡献。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python routing_ablation_matrix_16b9bd83.py --help
-python routing_ablation_matrix_16b9bd83.py --input sample.txt
-python routing_ablation_matrix_16b9bd83.py --input sample.txt --json
+python gradient_accumulation_batch_ablation.py --help
+python gradient_accumulation_batch_ablation.py --input sample.txt
+python gradient_accumulation_batch_ablation.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「消融矩阵」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python routing_ablation_matrix_16b9bd83.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python routing_ablation_matrix_16b9bd83.py --input sample.txt --json`；
+2. 运行 `python gradient_accumulation_batch_ablation.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
